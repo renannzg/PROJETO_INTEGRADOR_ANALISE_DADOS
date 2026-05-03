@@ -3,14 +3,12 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
-# Configuração da página
 st.set_page_config(
     page_title="Evasão Escolar Brasil | Dashboard",
     page_icon="🏫",
     layout="wide"
 )
 
-# Estilização Básica (CSS)
 st.markdown("""
     <style>
     .main {
@@ -98,23 +96,22 @@ with col_graf2:
     st.plotly_chart(fig2, use_container_width=True)
 
 # Mapa e Detalhes
-import requests  # <-- adicionar
+import requests
 
 st.subheader("🗺️ Mapa Coroplético: Evasão por Estado")
 evasao_estado = df_filtrado.groupby('estado')['taxa_evasao'].mean().reset_index()
 
-# <-- adicionar essas 2 linhas
 url = "https://raw.githubusercontent.com/codeforamerica/click_that_hood/master/public/data/brazil-states.geojson"
 geojson = requests.get(url).json()
 
 fig3 = px.choropleth(
     evasao_estado,
-    geojson=geojson,  # <-- adicionar
+    geojson=geojson, 
     locations='estado',
-    featureidkey="properties.sigla",  # <-- adicionar
+    featureidkey="properties.sigla",
     color='taxa_evasao',
     color_continuous_scale='RdYlGn_r',
-    scope='south america',  # pode manter
+    scope='south america',
     labels={'taxa_evasao': 'Evasão (%)'}
 )
 
