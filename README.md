@@ -18,9 +18,11 @@ O principal problema abordado e resolvido foi a **falha nos dados históricos** 
 ### 📂 ESTRUTURA DO PROJETO
 - `evasao_escolar.ipynb`: Notebook com 100% da análise (EDA, Inferência Estatística e Modelagem de Regressão/SHAP).
 - `dashboard_streamlit.py`: Dashboard interativo e *deploy-ready* com Plotly.
-- `data/`: Dataset corrigido para a análise (`dados_corrigidos.csv`).
-- `static/graficos/`: Gráficos gerados (Barras, Linhas, Mapa, Heatmap, Boxplot, Treemap).
-- `entregas/`: Documentações e vídeos das etapas do projeto acadêmico.
+- `dados/`: Todos os Datasets do INEP que utilizamos.
+- `graficos/`: Gráficos gerados (Barras, Linhas, Mapa, Heatmap, Boxplot, Treemap).
+- `VIDEO.md/`: Vídeo das etapas do projeto acadêmico.
+- `PDF das Análises/`: Pdf de todas as análises e insights.
+- `insights.md/`: Principais Insights.
 
 ### 🚀 COMO EXECUTAR O DASHBOARD
 1. Instale as dependências: `pip install -r requirements.txt`
