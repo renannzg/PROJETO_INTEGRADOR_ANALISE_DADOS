@@ -129,5 +129,3 @@ st.info("""
 - O ano de **2021 reflete o pico da pandemia**, com altas significativas em todas as regiões.
 - Há uma **forte correlação negativa entre renda e evasão**, destacando que a pobreza (renda < R$ 800) aumenta o risco de abandono em até 4 vezes.
 """)
-
-a
